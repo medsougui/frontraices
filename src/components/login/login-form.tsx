@@ -103,7 +103,7 @@ export function LoginForm({
                 </Button>
                 <div className="text-center text-sm text-[#6E6A62]">
                 Don&apos;t have an account?{" "}
-                <a href="#" className="underline underline-offset-4 text-[#6E6A62]">
+                <a href="/singup" className="underline underline-offset-4 text-[#6E6A62]">
                   Sign up
                 </a>
               </div>
