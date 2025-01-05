@@ -81,7 +81,7 @@ export function EmailVerification({ formData }: EmailVerificationProps) {
           return newAttempts;
         });
       } else {
-        
+        createuser()
         navigate("/login"); // Redirect on success
       }
     }
