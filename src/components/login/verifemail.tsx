@@ -82,7 +82,7 @@ export function EmailVerification({ formData }: EmailVerificationProps) {
         });
       } else {
         createuser()
-        navigate("/login"); // Redirect on success
+        navigate("/"); // Redirect on success
       }
     }
   };

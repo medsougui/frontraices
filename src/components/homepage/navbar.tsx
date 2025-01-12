@@ -75,7 +75,7 @@ if (storedUser) {
   const handleLogout = async () => {
     try {
       await UserService.logout();
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error("Error during logout:", error);
     }

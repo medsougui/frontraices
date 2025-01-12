@@ -6,12 +6,14 @@ import Login from './views/login';
 import Singup from './views/singup';
 import Home from './views/homepage';
 import Admin from './views/pageadmin';
+import Forbidden from './views/forbiden';
 import { PasswordRecovery } from './components/login/pswdrecovery';
 
 createRoot(document.getElementById('root')!).render(
   
     <Router>
       <Routes>
+      <Route path="/forbidden" element={<Forbidden />} />
       <Route path="/singup" element={<Singup />} />
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
