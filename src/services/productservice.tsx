@@ -16,8 +16,8 @@ export interface ProductType {
   name: string;
 }
 
-const API_URL_PRODUCTS = "http://localhost:8000/api/products/";
-const API_URL_TYPE = "http://localhost:8000/api/types/";
+const API_URL_PRODUCTS = "https://backend-6a3w.onrender.com/api/products/";
+const API_URL_TYPE = "https://backend-6a3w.onrender.com/api/types/";
 
 export const getAllProducts = async (): Promise<Product[]> => {
   try {

@@ -22,7 +22,7 @@ interface User {
   photo:string;
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://backend-6a3w.onrender.com/api";
 
 const UserService = {
   /**
@@ -124,7 +124,7 @@ const UserService = {
   sendVerificationEmail: async (email: string): Promise<string> => {
     try {
       // Send the email via the API and get the response
-      const response = await axios.post(`http://localhost:8000/send-verification-email/`, { email });
+      const response = await axios.post(`https://backend-6a3w.onrender.com/send-verification-email/`, { email });
   
       // Return the verification code from the response
       return response.data.code.toString();
