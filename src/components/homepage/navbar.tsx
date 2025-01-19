@@ -217,7 +217,7 @@ if (storedUser) {
 
             <DisclosureButton
               as="button"
-              onClick={()=>setSelectedpage("home")}
+              onClick={()=>setSelectedpage("about")}
               className="bg-[#9f7126] text-white w-fullbg-[#d5c5ac] w-full hover:bg-[#d0a45d]
             block rounded-md px-3 py-2 text-base font-medium">
               About US
