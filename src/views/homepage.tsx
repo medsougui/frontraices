@@ -3,7 +3,7 @@ import { Productskeleton } from "@/components/homepage/products";
 import { Navbar } from "@/components/homepage/navbar";
 import { ProductCard } from "@/components/homepage/productcard";
 import { getAllProducts, Product } from "@/services/productservice"; // Import the service
-
+import Aboutus from './Aboutus';
 interface ProductCardProps {
   productName: string;
   originalPrice: number;
@@ -19,12 +19,17 @@ interface Shoppingitem {
 }
 
 export default function Home() {
+  const [main,setMain]=useState<string>("home")
+  const [Typesbar,setTypesbar]=useState<boolean>(true)
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedType, setSelectedType] = useState<number>(0); // Default to 'All'
   const [shoppingItems, setShoppingItems] = useState<Shoppingitem[]>([]); // Shopping list
 
+  useEffect(() => {
+    console.log("Current main value:", main);
+  }, [main]);
   // Fetch products using the product service
   useEffect(() => {
     const fetchProducts = async () => {
@@ -33,7 +38,6 @@ export default function Home() {
       setProducts(productList);
       setLoading(false);
     };
-
     fetchProducts();
   }, []);
 
@@ -48,6 +52,7 @@ export default function Home() {
 
   // Function to handle adding product to cart
   const addToCart = (product: ProductCardProps, quantity: number) => {
+    
     setShoppingItems(prevItems => {
       const updatedItems = [...prevItems];
       const existingItem = updatedItems.find(item => item.products.productName === product.productName);
@@ -61,18 +66,20 @@ export default function Home() {
       return updatedItems;
     });
   };
-
+if(main=="home"){
   if (loading) {
     return (
       <div>
 <Navbar
+setSelectedpage={setMain}
+ Typesbar={false}
   setSelectedType={setSelectedType}
   shoppingItems={shoppingItems}
   setShoppingItems={setShoppingItems}
   setSearchTerm={setSearchTerm} // Pass the search term setter
 />
         {/* Skeleton loader while data is being fetched */}
-        <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 grid-flow-row gap-2 mt-24 ms-7 lg:ms-24">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 grid-flow-row gap-2 mt-32 ms-7 lg:ms-24">
           {Array.from({ length: 20 }).map((_, index) => (
             <Productskeleton key={index} />
           ))}
@@ -84,12 +91,14 @@ export default function Home() {
   return (
     <div>
 <Navbar
+  setSelectedpage={setMain}
+  Typesbar={Typesbar}
   setSelectedType={setSelectedType}
   shoppingItems={shoppingItems}
   setShoppingItems={setShoppingItems}
   setSearchTerm={setSearchTerm} // Pass the search term setter
 />
-      <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 grid-flow-row gap-2 mt-24 ms-7 lg:ms-24">
+      <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 grid-flow-row gap-2 mt-32 ms-7 lg:ms-24">
         {filteredProducts.map((product) => (
           <div key={product.idp}>
             <ProductCard
@@ -106,4 +115,21 @@ export default function Home() {
       </div>
     </div>
   );
+}
+else if((main=="about")){
+  return(
+  <div>
+    <Navbar
+    setSelectedpage={setMain}
+      Typesbar={false}
+      setSelectedType={setSelectedType}
+      shoppingItems={shoppingItems}
+      setShoppingItems={setShoppingItems}
+      setSearchTerm={setSearchTerm} // Pass the search term setter
+    />
+          <div className="mt-14">
+          <Aboutus></Aboutus>
+          </div>
+        </div>)
+}
 }
