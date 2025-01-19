@@ -20,7 +20,6 @@ interface Shoppingitem {
 
 export default function Home() {
   const [main,setMain]=useState<string>("home")
-  const [Typesbar,setTypesbar]=useState<boolean>(true)
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -92,7 +91,7 @@ setSelectedpage={setMain}
     <div>
 <Navbar
   setSelectedpage={setMain}
-  Typesbar={Typesbar}
+  Typesbar={true}
   setSelectedType={setSelectedType}
   shoppingItems={shoppingItems}
   setShoppingItems={setShoppingItems}
