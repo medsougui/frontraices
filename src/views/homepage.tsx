@@ -8,7 +8,7 @@ interface ProductCardProps {
   productName: string;
   originalPrice: number;
   stock: number;
-  imageBase64: string | null; // Use Base64 string for the image
+  imageBase64: string | null; 
   discount: number;
   type: number;
 }
