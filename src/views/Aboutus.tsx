@@ -20,37 +20,37 @@ const EnhancedAbout = () => {
 
   const versions = [
     {
-      version: "3.0",
-      date: "2024",
-      features: ["AI-powered recommendations", "Real-time collaboration", "Advanced analytics dashboard"],
-      highlight: "Major platform overhaul"
+      version: "🌱",
+      date: "",
+      features: ["We offer high-quality fruits and vegetables that are sustainably grown and carefully selected, ensuring freshness and superior taste ."],
+      highlight: " Sustainable Quality "
     },
     {
-      version: "2.0",
-      date: "2023",
-      features: ["UI redesign", "Performance optimization", "Mobile app launch"],
-      highlight: "Mobile-first approach"
+      version: "🍎",
+      date: "",
+      features: ["Our commitment to freshness guarantees that every product delivers rich, natural flavors, enhancing a healthy and nutritious lifestyle."],
+      highlight: "Freshness & Flavor"
     },
     {
-      version: "1.0",
-      date: "2022",
-      features: ["Core functionality", "User authentication", "Basic reporting"],
-      highlight: "Initial release"
+      version: "🌍",
+      date: "",
+      features: ["Through eco-friendly practices and mindful sourcing, we promote a responsible way of consuming food, supporting both personal well-being and environmental sustainability."],
+      highlight: "Conscious Living"
     }
   ]
 
   const rules = [
     {
-      title: "Community Guidelines",
-      points: ["Respect diverse opinions", "Maintain professional conduct", "Support inclusive environment"]
+      title: "Commitment to Sustainability",
+      points: ["We prioritize eco-friendly practices, ensuring responsible sourcing and minimal environmental impact to protect our planet."]
     },
     {
-      title: "Platform Usage",
-      points: ["Follow security protocols", "Report technical issues", "Regular data backups"]
+      title: "Quality & Well-being",
+      points: ["Our carefully selected organic products guarantee freshness, superior taste, and essential nutrition for a healthier lifestyle."]
     },
     {
-      title: "Content Policy",
-      points: ["Original content only", "Proper attribution", "No harmful content"]
+      title: "Social Responsibility",
+      points: ["We support local producers, ethical consumption, and initiatives that create a positive impact on communities and all living beings."]
     }
   ]
 
@@ -87,12 +87,13 @@ const EnhancedAbout = () => {
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-6xl font-bold mb-8 text-[#8B4513]">
-            Innovating Tomorrow
+           Our Vision & About Us
           </h1>
           <p className="text-xl leading-relaxed mb-8 text-[#5C3317]">
-            We are pioneering the future of digital experiences through cutting-edge technology 
-            and unwavering commitment to excellence. Our platform combines innovation, security, 
-            and user-centric design to deliver exceptional value to our growing community.
+
+At Raíces Naturales, we are committed to being the leading brand in healthy and sustainable food, providing fresh, natural products while protecting the planet. Through eco-friendly practices, we minimize impact, reduce waste, and promote conscious consumption.
+
+Founded in 2021, Raíces Naturales is Tunisia’s first premium store dedicated to selling organic and high-quality fruits and vegetables. We specialize in offering the freshest produce, ensuring both quality and sustainability in every bite. Welcome to a healthier way of living!
           </p>
         </div>
       </section>
@@ -104,7 +105,7 @@ const EnhancedAbout = () => {
 >
   <div className="max-w-6xl mx-auto px-6 py-12">
     <h2 className="text-4xl font-bold text-[#8B4513] mt-8 mb-12 text-center">
-      Evolution Timeline
+      Our Mission
     </h2>
     <div className="space-y-8">
       {versions.map((item, index) => (
