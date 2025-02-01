@@ -156,7 +156,7 @@ Founded in 2021, Raíces Naturales is Tunisia’s first premium store dedicated 
         }}
       >
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-[#8B4513] mb-12 text-center">Platform Guidelines</h2>
+          <h2 className="text-4xl font-bold text-[#8B4513] mb-12 text-center"> Our Values </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {rules.map((rule) => (
               <div
